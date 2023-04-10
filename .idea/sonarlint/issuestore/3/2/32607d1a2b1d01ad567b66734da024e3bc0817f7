@@ -1,9 +1,0 @@
-
-Q	java:S125"<This block of commented-out lines of code should be removed.(ËáçÕ
-}
-java:S1128"`Remove this unused import 'org.springframework.boot.context.properties.ConfigurationProperties'.(¦Õ¸Ç8òûáÜö0
-j
-java:S1128
-"MRemove this unused import 'org.springframework.mail.javamail.JavaMailSender'.(ÕÃ›8òûáÜö0
-`
-java:S1128"CRemove this unused import 'org.springframework.stereotype.Service'.(¼º¡Ú8òûáÜö0

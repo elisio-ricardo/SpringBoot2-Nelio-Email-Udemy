@@ -1,6 +1,0 @@
-
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Îß¼äÿÿÿÿÿ
-e
-java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ˆâ‡áþÿÿÿÿ
-e
-java:S4488'"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÃÑØ±ÿÿÿÿÿ
