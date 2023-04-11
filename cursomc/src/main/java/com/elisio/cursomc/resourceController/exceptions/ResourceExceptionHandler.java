@@ -6,6 +6,7 @@ import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.s3.model.AmazonS3Exception;
 import com.elisio.cursomc.service.validation.exceptions.AuthorizationException;
 import com.elisio.cursomc.service.validation.exceptions.DataIntegrityException;
+import com.elisio.cursomc.service.validation.exceptions.FileException;
 import com.elisio.cursomc.service.validation.exceptions.ObjectNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,8 +52,8 @@ public class ResourceExceptionHandler {
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(err);
     }
 
-    @ExceptionHandler(FilerException.class)
-    public ResponseEntity<StandardError> file(FilerException e, HttpServletRequest request) {
+    @ExceptionHandler(FileException.class)
+    public ResponseEntity<StandardError> file(FileException e, HttpServletRequest request) {
 
         StandardError err = new StandardError(System.currentTimeMillis(), HttpStatus.BAD_REQUEST.value(), "Erro de arquivo", e.getMessage(), request.getRequestURI());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
@@ -79,10 +80,4 @@ public class ResourceExceptionHandler {
         StandardError err = new StandardError(System.currentTimeMillis(), HttpStatus.BAD_REQUEST.value(), "Erro Amazon S3 ", e.getMessage(), request.getRequestURI());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
     }
-
-
-
-
-
-
 }

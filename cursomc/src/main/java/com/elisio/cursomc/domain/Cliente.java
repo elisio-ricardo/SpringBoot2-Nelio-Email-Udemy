@@ -61,7 +61,8 @@ public class Cliente implements Serializable {
     @CollectionTable(name = "PERFIS")
     private Set<Integer> perfis = new HashSet<>();
 
-    private String imageURL;
+    //salva apenas a uri
+//    private String imageURL;
 
 
     //Dessa forma por padrao todo vez que criar um cliente ele tera por padrao  o perfil cliente
@@ -156,11 +157,13 @@ public class Cliente implements Serializable {
         this.pedidos = pedidos;
     }
 
-    public String getImageURL() {
-        return imageURL;
-    }
+//    public String getImageURL() {
+//        return imageURL;
+//    }
+//
+//    public void setImageURL(String imageURL) {
+//        this.imageURL = imageURL;
+//    }
 
-    public void setImageURL(String imageURL) {
-        this.imageURL = imageURL;
-    }
+
 }
