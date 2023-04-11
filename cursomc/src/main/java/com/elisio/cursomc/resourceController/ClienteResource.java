@@ -32,6 +32,13 @@ public class ClienteResource {
         return ResponseEntity.ok().body(obj);
     }
 
+    @GetMapping(value = "/email")
+    public ResponseEntity<Cliente> find(@RequestParam(value = "value") String email) {
+        Cliente obj = service.findByEmail(email);
+
+        return ResponseEntity.ok().body(obj);
+    }
+
     @PreAuthorize("hasAnyRole('ADMIN')")//autorizar o uso de quem tem o perfil admin
     @GetMapping
     public ResponseEntity<List<ClienteDTO>> findAll() {

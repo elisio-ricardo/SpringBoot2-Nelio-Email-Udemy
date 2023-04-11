@@ -130,7 +130,20 @@ public class ClienteService {
     }
 
     public Cliente findByEmail(String email) {
-        return repository.findByEmail(email);
+
+        UserSS user = UserService.authenticated();
+        if (user == null || !user.hasRole(Perfil.ADMIN) && !email.equals(user.getId())) {
+            throw new AuthorizationException("Acesso Negado");
+        }
+
+        Cliente obj = repository.findByEmail(email);
+
+        if (obj == null) {
+            throw new ObjectNotFoundException("Objeto não encontrado! id: " + user.getId()
+                    + " Tipo: " + Cliente.class.getName());
+        }
+
+        return obj;
     }
 
 
