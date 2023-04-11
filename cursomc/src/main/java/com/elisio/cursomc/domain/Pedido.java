@@ -4,6 +4,7 @@ package com.elisio.cursomc.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
+import java.io.Serial;
 import java.io.Serializable;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
@@ -15,7 +16,7 @@ import java.util.Set;
 @Entity
 public class Pedido implements Serializable {
 
-   // @Serial
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id

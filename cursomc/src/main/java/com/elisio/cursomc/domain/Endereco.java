@@ -3,10 +3,13 @@ package com.elisio.cursomc.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
 public class Endereco implements Serializable {
+
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id

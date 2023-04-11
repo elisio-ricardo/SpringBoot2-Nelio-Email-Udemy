@@ -6,6 +6,7 @@ import com.elisio.cursomc.enums.TipoCliente;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -16,7 +17,7 @@ import java.util.stream.Collectors;
 @Entity
 public class Cliente implements Serializable {
 
-   // @Serial
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -59,6 +60,8 @@ public class Cliente implements Serializable {
     @ElementCollection(fetch = FetchType.EAGER)//assim vai carregar o perfil completo
     @CollectionTable(name = "PERFIS")
     private Set<Integer> perfis = new HashSet<>();
+
+    private String imageURL;
 
 
     //Dessa forma por padrao todo vez que criar um cliente ele tera por padrao  o perfil cliente
@@ -151,5 +154,13 @@ public class Cliente implements Serializable {
 
     public void setPedidos(List<Pedido> pedidos) {
         this.pedidos = pedidos;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }
