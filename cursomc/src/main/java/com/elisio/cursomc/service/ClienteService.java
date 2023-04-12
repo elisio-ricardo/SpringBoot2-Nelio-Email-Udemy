@@ -132,9 +132,10 @@ public class ClienteService {
     public Cliente findByEmail(String email) {
 
         UserSS user = UserService.authenticated();
-        if (user == null || !user.hasRole(Perfil.ADMIN) && !email.equals(user.getId())) {
+        if (user == null || !user.hasRole(Perfil.ADMIN) && !email.equals(user.getUsername())) {
             throw new AuthorizationException("Acesso Negado");
         }
+        String email2 = user.getUsername();
 
         Cliente obj = repository.findByEmail(email);
 
