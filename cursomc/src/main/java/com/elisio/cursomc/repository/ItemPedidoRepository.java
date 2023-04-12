@@ -1,4 +1,4 @@
-package com.elisio.cursomc.service.validation.repository;
+package com.elisio.cursomc.repository;
 
 
 import com.elisio.cursomc.domain.ItemPedido;

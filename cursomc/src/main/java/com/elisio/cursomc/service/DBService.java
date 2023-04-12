@@ -4,7 +4,7 @@ import com.elisio.cursomc.domain.*;
 import com.elisio.cursomc.enums.EstadoPagamento;
 import com.elisio.cursomc.enums.Perfil;
 import com.elisio.cursomc.enums.TipoCliente;
-import com.elisio.cursomc.service.validation.repository.*;
+import com.elisio.cursomc.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

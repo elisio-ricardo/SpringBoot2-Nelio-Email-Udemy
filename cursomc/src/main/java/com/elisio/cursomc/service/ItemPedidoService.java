@@ -3,7 +3,7 @@ package com.elisio.cursomc.service;
 
 import com.elisio.cursomc.domain.ItemPedido;
 import com.elisio.cursomc.service.validation.exceptions.ObjectNotFoundException;
-import com.elisio.cursomc.service.validation.repository.ItemPedidoRepository;
+import com.elisio.cursomc.repository.ItemPedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

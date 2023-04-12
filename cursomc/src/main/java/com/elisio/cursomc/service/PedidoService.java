@@ -1,13 +1,16 @@
 package com.elisio.cursomc.service;
 
 
-import com.elisio.cursomc.domain.*;
+import com.elisio.cursomc.domain.Cliente;
+import com.elisio.cursomc.domain.ItemPedido;
+import com.elisio.cursomc.domain.PagamentoComBoleto;
+import com.elisio.cursomc.domain.Pedido;
 import com.elisio.cursomc.enums.EstadoPagamento;
+import com.elisio.cursomc.repository.*;
 import com.elisio.cursomc.security.UserSS;
 import com.elisio.cursomc.security.UserService;
 import com.elisio.cursomc.service.validation.exceptions.AuthorizationException;
 import com.elisio.cursomc.service.validation.exceptions.ObjectNotFoundException;
-import com.elisio.cursomc.service.validation.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

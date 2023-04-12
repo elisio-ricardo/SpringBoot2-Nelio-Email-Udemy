@@ -1,7 +1,7 @@
 package com.elisio.cursomc.service;
 
 import com.elisio.cursomc.domain.Pagamento;
-import com.elisio.cursomc.service.validation.repository.PagamentoRepository;
+import com.elisio.cursomc.repository.PagamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

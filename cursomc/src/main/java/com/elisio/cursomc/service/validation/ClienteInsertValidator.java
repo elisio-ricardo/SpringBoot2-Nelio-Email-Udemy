@@ -3,7 +3,7 @@ package com.elisio.cursomc.service.validation;
 import com.elisio.cursomc.DTO.ClienteNewDTO;
 import com.elisio.cursomc.domain.Cliente;
 import com.elisio.cursomc.enums.TipoCliente;
-import com.elisio.cursomc.service.validation.repository.ClienteRepository;
+import com.elisio.cursomc.repository.ClienteRepository;
 import com.elisio.cursomc.resourceController.exceptions.FieldMessage;
 import com.elisio.cursomc.service.validation.utils.BR;
 import org.springframework.beans.factory.annotation.Autowired;

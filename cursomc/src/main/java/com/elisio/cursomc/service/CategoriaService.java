@@ -5,7 +5,7 @@ import com.elisio.cursomc.DTO.CategoriaDTO;
 import com.elisio.cursomc.domain.Categoria;
 import com.elisio.cursomc.service.validation.exceptions.DataIntegrityException;
 import com.elisio.cursomc.service.validation.exceptions.ObjectNotFoundException;
-import com.elisio.cursomc.service.validation.repository.CategoriaRepository;
+import com.elisio.cursomc.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;

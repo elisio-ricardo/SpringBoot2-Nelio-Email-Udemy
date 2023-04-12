@@ -3,9 +3,8 @@ package com.elisio.cursomc.service;
 
 import com.elisio.cursomc.domain.Cliente;
 import com.elisio.cursomc.service.validation.exceptions.ObjectNotFoundException;
-import com.elisio.cursomc.service.validation.repository.ClienteRepository;
+import com.elisio.cursomc.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
